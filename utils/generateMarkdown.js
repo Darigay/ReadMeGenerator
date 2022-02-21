@@ -1,17 +1,18 @@
-//<i class="fa fa-google" aria-hidden="true"></i>
+
 // Creating a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+
 function renderLicenseBadge(data) {
-  const licenseType = data.license[0];
+  const licenseType = `${data.license}`;
   let licenseString = " ";
   if (licenseType === "MIT") {
-    licenseString = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
+    licenseString = `![GitHub license](https://img.shields.io/badge/License-MIT-yellow.svg)`
   };
-  if (licenseType === "Apache License 2.0") {
-    licenseString = `![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`
+  if (licenseType === "APACHE 2.0") {
+    licenseString = `![GitHub license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`
   };
-  if (licenseType === "GPL-v3") {
-    licenseString = `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`
+  if (licenseType === "GPl-v3") {
+    licenseString = `![GitHub license](https://img.shields.io/badge/License-GPLv3-blue.svg)`
   };
   return licenseString;
 };
@@ -28,8 +29,9 @@ function generateMarkdown(data) {
   3. [Contributors](#Contributors)
   4. [Tests](#Tests)
   5. [License](#License)
-  6. [GitHub](#GitHub)
-  7. [E-mail](#E-mail)
+  6. [Preview](#Preview)
+  7. [GitHub](#GitHub)
+  8. [E-mail](#E-mail)
   ## Description
   ${data.description} 
   ## Installation
@@ -41,7 +43,8 @@ function generateMarkdown(data) {
   ## Tests
   The following needed to run the test:${data.Tests}
   ## License
-  The Project is licensed under: ${renderLicenseBadge(data)}
+  The Project is licensed under: ${data.license}  ${renderLicenseBadge(data)}
+  ## Preview
   ## GitHub
   ${data.username}
   ## E-mail

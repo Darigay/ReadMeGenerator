@@ -50,7 +50,7 @@ const questions = [
         
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
         message: 'Give license is being used ?',
         choices:['MIT','APACHE 2.0','GPl-v3','None'] 
