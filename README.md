@@ -24,6 +24,8 @@
   The Project is licensed under: MIT  ![GitHub license](https://img.shields.io/badge/License-MIT-yellow.svg)
   ## Preview
   
+  ![preview](https://user-images.githubusercontent.com/94805706/154894785-beb6afb4-abe3-4a39-a00d-e76adfbfe678.png)
+
   ## GitHub
   Darigay
   ## E-mail
