@@ -22,7 +22,7 @@ function generateMarkdown(data) {
   return `
   Professional README.md Generator
   ## ${data.Title}
-  https://github.com/${data.username}/${data.Title}
+   https://github.com/${data.username}/${data.Title}
   ## Table of Contents
   1. [Installation](#Installation)
   2. [Usage](#usage)  
@@ -33,17 +33,24 @@ function generateMarkdown(data) {
   7. [GitHub](#GitHub)
   8. [E-mail](#E-mail)
   ## Description
+  This professional README.md generator uses node.js and npm package on Command Line Interface (CLI) for projects hosted on Github. 
+  It also uses inquirer to prompt project questions in this application and generates a markdown file with dynamic data generated 
+  from the user's interaction through terminal actions.
   ${data.description} 
   ## Installation
   The following dependencies needed to be installed to run the application are ${data.installation}
   ## Usage
-  The user need to know to use this app ,${data.usage}
+  After installing in your project directory, simply run ${data.usage} in the terminal.
+  Answering all the prompts , "README.md" will be created with all of your responses.
+  Click on the video for a quick walkthrough of the repo.
+  
   ## Contributors
   Contributors: ${data.contributors}
   ## Tests
   The following needed to run the test:${data.Tests}
   ## License
-  The Project is licensed under: ${data.license}  ${renderLicenseBadge(data)}
+  The Project is licensed under: ${data.license}  
+  LICENCE:${renderLicenseBadge(data)}
   ## Preview
   ## GitHub
   ${data.username}
