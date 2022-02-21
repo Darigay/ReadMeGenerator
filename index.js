@@ -14,12 +14,17 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'username',
+        message: 'What is your name?' 
+    },
+    {
+        type: 'input',
         name: 'github',
         message: 'What is your github username?' 
     },
     {
         type: 'input',
-        name: 'Email Id',
+        name: 'Email',
         message: 'What is your Email Address?' 
     },
     {
@@ -27,12 +32,7 @@ const questions = [
         name: 'Project Description',
         message: 'Give a brief description about your project' 
     },
-    {
-        type: 'input',
-        name: 'Table Of Contents',
-        message: 'Table of contents'
-
-    },    
+     
     {
         type: 'input',
         name: 'What does the user need to install to run this app ?',
@@ -47,7 +47,7 @@ const questions = [
         type: 'checkbox',
         name: 'license',
         message: 'Give license is being used ?',
-        choices:['MIT','APACHE 2.0','GPl-3.0','None'] 
+        choices:['MIT','APACHE 2.0','GPl-v3','None'] 
     },
 
   

@@ -8,19 +8,47 @@ function renderLicenseBadge(data) {
     licenseString = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
   };
   if (licenseType === "Apache License 2.0") {
-     licenseString = `![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`
-    };
-  if (licenseType === "GNU General Public License 3.0") {
-      licenseString = `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`
-    };
-  return licenseString
+    licenseString = `![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`
   };
+  if (licenseType === "GNU General Public License 3.0") {
+    licenseString = `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`
+  };
+  return licenseString
+};
 
-  // function to Generate Readme Markdown
+// function to Generate Readme Markdown
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `
+  ## ${data.title}
+  https://github.com/${data.username}/${data.Title}
+  ## Table of Contents
+  1. [Installation](#Installation)
+  2. [Usage](#Usage)  
+  3. [Contributing](#Contributing)
+  4. [Tests](#Tests)
+  5. [License](#License)
+  6. [GitHub](#GitHub)
+  7. [E-mail](#E-mail)
+  ## Description
+  ${data.description} 
+  ## Installation
+  The following dependencies needed to be installed to run the application are ${data.installation}
+  ## Usage
+  The user need to know to use this app ,${data.usage}
+  ## Contributing
+  Contributors: ${data.contributing}
+  ## Tests
+  The following needed to run the test:${data.tests}
+  ## License
+  The Project is licensed under: ${renderLicenseBadge(data)} 
+  ## GitHub
+  ${data.github}
+  ## E-mail
+  ${data.Email}
+  ## Questions:
+  If you have any questions about the repo, open an issue or contact at ${data.username}/${data.Email}
 
-`;
+ `;
 }
 
 module.exports = generateMarkdown;
