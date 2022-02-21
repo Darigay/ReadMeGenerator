@@ -5,11 +5,11 @@ const utils = require("./utils");
 const generateMarkDown = require("./utils/generateMarkdown");
 
 
-// Creating an array of questions for user input
+// Creating an array of questions for user input using Inquirer
 const questions = [
     {
         type: 'input',
-        name: 'Title of the Project',
+        name: 'Title',
         message: 'What is the title of the project?'
     },
     {
@@ -47,7 +47,7 @@ const questions = [
         type: 'checkbox',
         name: 'license',
         message: 'Give license is being used ?',
-        choices:['MIT','APACHE 2.8','GPl 3.0','BSD 3','None'] 
+        choices:['MIT','APACHE 2.0','GPl-3.0','None'] 
     },
 
   
